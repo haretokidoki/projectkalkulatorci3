@@ -20,8 +20,8 @@ class Pengurangan extends CI_Controller {
 	 */
 	public function index()
 	{
-		if ($this->input->post() != null) {
-			$nilai = $this->input->post();
+		$nilai = $this->input->post();
+		if ($this->input->post() != null && is_numeric($nilai['input_a']) && is_numeric($nilai['input_b'])){
 			$data['a'] = $nilai['input_a'];
 			$data['b'] = $nilai['input_b'];
 			$data['c'] = $data['a']-$data['b'];
