@@ -5,8 +5,8 @@ class Penjumlahan extends CI_Controller {
 
 	public function index()
 	{
-       if ($this->input->post() != null) {
-            $nilai = $this->input->post();
+        $nilai = $this->input->post();
+        if ($this->input->post() != null && is_numeric($nilai['a']) && is_numeric($nilai['b'])) {    
             $data['a'] = $nilai['a'];
             $data['b'] = $nilai['b'];
             $data['c'] = $data['a']+$data['b'];
